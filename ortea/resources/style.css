@@ -626,7 +626,7 @@ html {
   height: 50vmin;
   background-color: #3E5FAC;
   color: var(--color-primary);
-  background-image: url('./fotos/pexels-irina-iriser-4706409.jpg');
+  background-image: url('/fotos/pexels-irina-iriser-4706409.jpg');
   background-position: center;
   background-size: cover;
   position: relative;

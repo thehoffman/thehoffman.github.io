@@ -190,6 +190,7 @@ html {
     /* Buttons */
     
     .buttons {
+        font-family: var(--font-heading);
         align-items: center;
         display: flex !important;
         flex-direction: column;
@@ -197,6 +198,9 @@ html {
         text-align: center;
         padding:  40px 0px;
         width: 240px;
+        border-radius: 100%;
+        overflow: hidden;
+
     }
     
     .btn {
@@ -209,6 +213,8 @@ html {
         position: relative;
         text-decoration: none;
         width: 100%;
+        border-radius: 100%;
+        overflow: hidden;
     }
     .btn:hover {
         text-decoration: none;
@@ -219,10 +225,12 @@ html {
         --uismLinkDisplay: var(--smLinkDisplay, inline-flex);
         display: var(--uismLinkDisplay);
         color:#3E5FAC;
-        outline: solid  5px #3E5FAC;
+        border: solid  1px #3E5FAC;
         position: relative;
         transition-duration: 0.4s;
         overflow: hidden;
+        border-radius: 15px;
+        perspective: 1px;
     }
     
     .effect04::before,
@@ -235,6 +243,7 @@ html {
     /* 文字1を上に */
     .effect04:hover{
         background-color: #3E5FAC;
+
     }
     
     /* HOVERしたら文字1を上に */

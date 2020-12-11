@@ -174,7 +174,7 @@ html {
     
     header.landingpage  h1 {
         font-family: "Baskerville", serif;
-        font-size: 10vw;
+        font-size: 10em;
         font-weight: 800;
         flex: 1;
         color: #3E5FAC;
@@ -183,7 +183,7 @@ html {
 
     header.landingpage  p {
         font-family: "Raleway", sans-serif;
-        font-size: 5vw;
+        font-size: 1em;
         color: #3E5FAC;
     }
 

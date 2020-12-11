@@ -657,6 +657,12 @@ html {
   background-position: center;
 }
 
+@media only screen and (max-width: 600px) {
+  #herotext {
+    display: none;
+  }
+}
+
 
 /* Produit */
 

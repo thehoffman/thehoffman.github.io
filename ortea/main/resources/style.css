@@ -784,8 +784,8 @@ html {
 }
 
 @media only screen and (max-width: 600px) {
-  #herotext {
-    display: none;
+  #herotext h1 {
+    font-size: 3vh;
   }
 }
 

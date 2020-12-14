@@ -196,11 +196,19 @@ html {
         flex-direction: column;
         justify-content: center;
         text-align: center;
-        padding:  40px 0px;
-        width: 240px;
-        border-radius: 100%;
-        overflow: hidden;
+        padding:  10px 0px;
 
+    }
+
+    .buttons#landingcta{
+      font-family: var(--font-heading);
+      align-items: center;
+      display: flex !important;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      padding:  10px 0px;
+      width:450px;
     }
     
     .btn {
@@ -213,7 +221,6 @@ html {
         position: relative;
         text-decoration: none;
         width: 100%;
-        border-radius: 100%;
         overflow: hidden;
     }
     .btn:hover {
@@ -229,7 +236,6 @@ html {
         position: relative;
         transition-duration: 0.4s;
         overflow: hidden;
-        border-radius: 15px;
         perspective: 1px;
     }
     
@@ -270,6 +276,117 @@ html {
         -webkit-transform: translateY(0) scale(1,1);
                 transform: translateY(0) scale(1,1);
     }
+
+
+/* Button Fade In (on dark background) https://github.com/Varin6/Hover-Buttons */
+.hbtn {
+  font-family: var(--font-heading);
+  position: relative;
+  width: 75%;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  padding: 8px 20px;
+  margin: 0px 3px 6px;
+  text-align: center;
+  border: 1px solid var(--color-secondary);
+  text-decoration: none;
+  color: var(--color-secondary);
+  white-space: nowrap;
+  z-index: 0;
+} 
+
+
+.hbtn i {
+  padding-right: 8px;
+} 
+
+
+.hb-fill-on::before {
+  position: absolute;
+  content: "";
+  background: var(--color-secondary);
+  transition-duration: 0.3s;
+  z-index: -1;
+  top: 0px;
+  right: auto;
+  bottom: auto;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+} 
+
+
+.hb-fill-on:hover::before {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+} 
+
+
+.hb-fill-on:hover {
+  color: var(--color-primary);
+  background: var(--color-secondary);
+  transition: color 0.3s ease 0s, background 0s ease 0.3s;
+} 
+
+
+/* Button Fade In (on light background) */
+
+.hbtnrev {
+  font-family: var(--font-heading);
+  position: relative;
+  width: 75%;
+  box-sizing: border-box;
+  display: inline-block;
+  overflow: hidden;
+  padding: 8px 20px;
+  margin: 0px 3px 6px;
+  text-align: center;
+  border: 1px solid var(--color-primary);
+  text-decoration: none;
+  color: var(--color-primary);
+  white-space: nowrap;
+  z-index: 0;
+} 
+
+
+.hbtnrev i {
+  padding-right: 8px;
+} 
+
+.hb-fill-on-rev::before {
+  position: absolute;
+  content: "";
+  background: var(--color-secondary);
+  transition-duration: 0.3s;
+  z-index: -1;
+  top: 0px;
+  right: auto;
+  bottom: auto;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+} 
+
+
+.hb-fill-on-rev:hover::before {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+} 
+
+
+.hb-fill-on-rev:hover {
+  background: transparent;
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  transition: color 0.3s ease 0s, background 0s ease 0s;
+} 
+
+
 
 /* Main Page */
 
@@ -626,9 +743,18 @@ html {
 
 /* Banner */
 
-#banner{
-  padding:0;
-  padding-bottom: 1vh;
+
+/*Navigation Bar */
+
+#navigation {
+  overflow: hidden;
+  background-color: #EDF6E3;
+  height: 20vh;
+  transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+  position: fixed; /* Sticky/fixed navbar */
+  width: 100%;
+  top: 0; /* At the top */
+  z-index: 99;
   min-height: 5vh;
   display: flex;
   flex-direction: column;
@@ -636,18 +762,18 @@ html {
   align-items: center;
 }
 
-
-#banner h1 {
+#navigation h1 {
   text-align: center;
   margin: 0;
+  padding: 0;
 }
 
 #logo h1 {
-  font-size: 5vw;
+  font-size: 10vh;
 }
 
 #herotext h1{
-  font-size: 2.5vw;
+  font-size: 5vh;
 }
 
 #logo {
@@ -663,6 +789,9 @@ html {
   }
 }
 
+main {
+  padding-top: 20vh;
+}
 
 /* Produit */
 
@@ -715,6 +844,14 @@ html {
 
 #equipe h2 {
   color: #EDF6E3;
+}
+
+#equipeheader{
+  padding:0;
+}
+
+.sectionheader{
+  padding:0;
 }
 
 .teammember {
@@ -778,5 +915,4 @@ html {
     
   }
 }
-
 

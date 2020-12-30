@@ -916,3 +916,38 @@ main {
   }
 }
 
+/* Philosophie */
+
+/* Footer */
+
+footer {
+  background-color: #3E5FAC;
+  color: #EDF6E3;
+}
+
+footer h3{
+  color: #EDF6E3
+}
+
+
+#footer{
+  display: flex;
+  align-items: center;
+}
+
+#imprint{
+  display:flex;
+}
+
+#imprint div{
+  padding:2vw;
+}
+
+#copyright{
+  text-align: right;
+}
+
+#socials {
+  font-size: 4vw;
+  display: flex;
+}

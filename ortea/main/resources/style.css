@@ -950,4 +950,18 @@ footer h3{
 #socials {
   font-size: 4vw;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#socials div{
+  text-align: center;
+  margin: 0px;
+}
+
+
+#socials i:hover{
+  color: darkgoldenrod;
+  transition-delay: 0.1s;
+  transition-duration: 0.5s;
 }

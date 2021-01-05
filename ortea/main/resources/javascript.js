@@ -5,8 +5,10 @@ function scrollFunction() {
   if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
     document.getElementById("navigation").style.height = "12vh";
     document.getElementById("herotext").style.display= "none";
-  } else {
+} else {
     document.getElementById("navigation").style.height = "20vh";
     document.getElementById("herotext").style.display= "inline-block";
+    document.getElementById("logotext").style.textAlign= "center";
+
   }
 }

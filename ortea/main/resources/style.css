@@ -108,7 +108,8 @@
 
   :root {
     --color-primary: #3E5FAC;
-    --color-secondary: #EDF6E3;;
+    --color-secondary: #EDF6E3;
+    --color-tertiary: black;
     --duration: 1s;
     --nav-duration: calc(var(--duration) / 4);
     --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -135,7 +136,7 @@
     font-family: var(--font-heading);
     font-size: calc(var(--font-size) + 6vmin);
     line-height: calc(var(--line-height) / 1.25);
-    color: #3E5FAC;
+    color: var(--color-primary);
   }
 
   h2 {
@@ -143,11 +144,11 @@
     font-family: var(--font-heading);
     font-size: calc(var(--font-size) + 3vmin);
     line-height: calc(var(--line-height) / 1.25);
-    color: #3E5FAC;
+    color: var(--color-primary);
   }
 
 html {
-    background-color:#EDF6E3 ;
+    background-color:var(--color-secondary) ;
   }
 
 
@@ -163,28 +164,28 @@ html {
 
     header.landingpage {
         height: 100vh;
-        background-color: #EDF6E3;
+        background-color: var(--color-secondary);
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        /*border-color:#3E5FAC;*/
+        /*border-color:var(--color-primary);*/
     }
     
     
     header.landingpage  h1 {
         font-family: "Baskerville", serif;
-        font-size: 10em;
+        font-size: 20vw;
         font-weight: 800;
         flex: 1;
-        color: #3E5FAC;
+        color: var(--color-primary);
         text-decoration: none;
     }
 
     header.landingpage  p {
         font-family: "Raleway", sans-serif;
-        font-size: 1em;
-        color: #3E5FAC;
+        font-size: 2vw;
+        color:var(--color-primary);
     }
 
     /* Buttons */
@@ -231,8 +232,8 @@ html {
     .effect04 {
         --uismLinkDisplay: var(--smLinkDisplay, inline-flex);
         display: var(--uismLinkDisplay);
-        color:#3E5FAC;
-        border: solid  1px #3E5FAC;
+        color:var(--color-primary);
+        border: solid  1px var(--color-primary);
         position: relative;
         transition-duration: 0.4s;
         overflow: hidden;
@@ -248,7 +249,7 @@ html {
     
     /* 文字1を上に */
     .effect04:hover{
-        background-color: #3E5FAC;
+        background-color: var(--color-primary);
 
     }
     
@@ -261,7 +262,7 @@ html {
     /*文字2*/
     .effect04::before{
         content: attr(data-sm-link-text);
-        color: #EDF6E3;
+        color: var(--color-secondary);
         position: absolute;
         left: 0;
         right: 0;
@@ -738,7 +739,7 @@ html {
 }
 
 .row#divider{
-  border-bottom: 5px solid #3E5FAC;
+  border-bottom: 5px solid var(--color-primary);
 }
 
 /* Banner */
@@ -748,9 +749,9 @@ html {
 
 #navigation {
   overflow: hidden;
-  background-color: #EDF6E3;
+  background-color: var(--color-secondary);
   height: 20vh;
-  transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+  transition: 0.3s ease-in; /* Adds a transition effect when the padding is decreased */
   position: fixed; /* Sticky/fixed navbar */
   width: 100%;
   top: 0; /* At the top */
@@ -758,7 +759,7 @@ html {
   min-height: 5vh;
   display: flex;
   flex-direction: column;
-  border-bottom: 1px solid #3E5FAC;
+  border-bottom: 1px solid var(--color-primary);
   align-items: center;
 }
 
@@ -766,6 +767,17 @@ html {
   text-align: center;
   margin: 0;
   padding: 0;
+  
+}
+
+#logoplaceholder{
+  display: none;
+  width:70%;
+  transition: 5s ease-in;
+}
+
+#logotext{
+  transition: 5s ease-in; /* Adds a transition effect when the padding is decreased */
 }
 
 #logo h1 {
@@ -774,13 +786,17 @@ html {
 
 #herotext h1{
   font-size: 5vh;
+  transition: 5s ease-in; /* Adds a transition effect when the padding is decreased */
 }
 
 #logo {
   width: 100%;
-  background-color: #EDF6E3;
+  background-color: var(--color-secondary);
   color: var(--color-primary);
   background-position: center;
+  display:flex;
+  justify-content: center;
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -835,15 +851,15 @@ main {
 /* Equipe */
 
 #equipe {
-  background-color: #3E5FAC;
-  color: #EDF6E3;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 
 #equipe h2 {
-  color: #EDF6E3;
+  color: var(--color-secondary);
 }
 
 #equipeheader{
@@ -869,6 +885,8 @@ main {
   align-items: flex-start;
   margin: 0;
   max-width: 100%;
+  padding-left: 2.5vw;
+  padding-right: 2.5vw;
 }
 
 .equipephoto img {
@@ -878,8 +896,7 @@ main {
 
 .equipetext{
   max-width: 50%;
-  padding-left: 2.5vw;
-  padding-right: 2.5vw;
+
 }
 
 @media screen and (max-width: 900px) {
@@ -921,12 +938,12 @@ main {
 /* Footer */
 
 footer {
-  background-color: #3E5FAC;
-  color: #EDF6E3;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
 }
 
 footer h3{
-  color: #EDF6E3
+  color: var(--color-secondary)
 }
 
 
@@ -960,7 +977,7 @@ footer h3{
 }
 
 #socials i:hover{
-  color: darkgoldenrod;
+  color: var(--color-tertiary);
   transition-delay: 0.1s;
   transition-duration: 0.5s;
 }
@@ -975,5 +992,9 @@ footer h3{
   #footer div {
     display: flex;
     justify-content: space-evenly;
+  }
+
+  #footer i {
+    font-size: 5vh;
   }
 }

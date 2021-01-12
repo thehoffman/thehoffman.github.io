@@ -5,6 +5,10 @@
     <link rel="stylesheet" href="./resources/reset.css">
     <link rel="stylesheet" href="./resources/style.css">
     <script type="text/javascript" src="./resources/javascript.js"></script>
+    <script type="text/javascript" src="./resources/skrollr.min.js"></script>
+    <script type="text/javascript">
+        var s = skrollr.init();
+    </script>
     <link rel="stylesheet" href="./resources/all.css">
     <meta charset="UTF-8">
 </head>
@@ -70,9 +74,11 @@
     
 
             <div class="col-12 buttons">
+
                 <a href="#" class="hbtnrev hb-fill-on-rev">DETAILER</a>
             </div>  
             <div class="col-12 buttons">
+
                 <a href="#" class="hbtnrev hb-fill-on-rev">BESTELLEN</a>
             </div>  
     </div>
@@ -138,7 +144,10 @@
 </div>
 
 <div class=row id=philosophie>
-    <div class=col-6 id=philosophietext>
+    <div class=col-6 id=philosophietext
+    data-center-top="opacity:0;" 
+    data-top-top="opacity:1;"
+    >
         <h2>
             Ons Philosophie. Nemmen dei bescht Ingredienten, sou lokal wei meiglech.
         </h2>
@@ -193,5 +202,6 @@
             </h3>
         </div>
     </div>
+
 </footer>
 </html>
